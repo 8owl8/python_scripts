@@ -1,12 +1,13 @@
+#!/usr/bin/python3.10
 import optparse
 
 import scapy.all as scapy
-import optparse
+import argparse
 
 def get_arguments():
-    parser = optparse.OptionParser()
-    parser.add_option("-t", "--target", dest="target", help="IP Жертвы: 192.168.0.1 / Диапазон IP - 192.168.0.0/24")
-    (options, argumets) = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t", "--target", dest="target", help="IP Жертвы: 192.168.0.1 / Диапазон IP - 192.168.0.0/24")
+    options = parser.parse_args()
     return options
 
 # сканирование по протоколу arp - вывод клиентов сети

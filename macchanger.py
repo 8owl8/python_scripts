@@ -11,10 +11,9 @@ optparse поддерживает как длинные,  так и коротк
 и позволяет различным образом связывать параметры  с их аргументами. Таким образом, все следующие командные 
 строки эквивалентны приведенному выше примеру: 
 
-* dest - это переменная, которая будет содержать в себе значение введеных пользователем аргументов
 """
 def get_arguments():
-        parser = optparse.OptionParser() #Вы создаете экземпляр OptionParser,  заполните его параметрами и проанализируйте командную строку.
+        parser = optparse.OptionParser() #Вы создаете экземпляр OptionParser,  заполняете его параметрами и проанализируйте командную строку.
         parser.add_option("-i", "--interface", dest="interface", help="Inteface to change its MAC address")
         parser.add_option("-m", "--mac", dest="new_mac", help="New MAC Address")
         (options, arguments) = parser.parse_args() #запись данных в options и arguments
